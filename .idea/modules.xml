@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../CRUDEx/CRUDEx.iml" filepath="$PROJECT_DIR$/../CRUDEx/CRUDEx.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringMVC_Hiber.iml" filepath="$PROJECT_DIR$/.idea/SpringMVC_Hiber.iml" />
     </modules>
   </component>
