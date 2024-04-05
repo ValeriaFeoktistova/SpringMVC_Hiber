@@ -9,7 +9,6 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -35,7 +34,7 @@ public class AppConfig {
         emf.setDataSource(dataSource);
         emf.setPackagesToScan("CRUD_MVC");
         emf.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-        // emf.setJpaProperties(hibernateProperties());
+        emf.setJpaProperties(hibernateProperties());
         return emf;
     }
 
@@ -48,6 +47,8 @@ public class AppConfig {
 
     private Properties hibernateProperties() {
         Properties properties = new Properties();
+        properties.put("hibernate.hbm2ddl.auto", "create");
+        properties.put("hibernate.hbm2ddl.auto", "update");
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         properties.put("hibernate.show_sql", "true");
         return properties;

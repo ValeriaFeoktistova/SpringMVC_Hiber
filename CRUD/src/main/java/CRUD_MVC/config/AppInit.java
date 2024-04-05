@@ -1,11 +1,9 @@
 package CRUD_MVC.config;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-
 
 public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
@@ -20,12 +18,10 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
-   /* @Override
+
+    @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         super.onStartup(servletContext);
-
-        // Создаем и регистрируем CharacterEncodingFilter
-        //обеспечивает корректную обработку символов на всех уровнях
         CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();
         encodingFilter.setEncoding("UTF-8");
         encodingFilter.setForceEncoding(true);
@@ -33,7 +29,6 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
 
         FilterRegistration.Dynamic encodingFilterRegistration = servletContext.addFilter("encodingFilter", encodingFilter);
         encodingFilterRegistration.addMappingForUrlPatterns(null, false, "/*");
-    }*/
-
+    }
 }
 
