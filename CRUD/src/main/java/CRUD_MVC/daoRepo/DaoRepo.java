@@ -1,6 +1,7 @@
 package CRUD_MVC.daoRepo;
 
 import CRUD_MVC.model.User;
+
 import java.util.List;
 
 public interface DaoRepo {

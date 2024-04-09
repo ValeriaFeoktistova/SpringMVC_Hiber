@@ -26,7 +26,7 @@
             <table>
                 <tr>
                     <td>
-                        <form th:action="@{/updateInfo}" method="get">
+                        <form th:action="@{/updateInfo}" method="post">
                             <input type="hidden" name="userId" th:value="${user.id}"/>
                             <button type="submit">Update</button>
                         </form>

@@ -35,7 +35,7 @@ public class MyController {
         return "redirect:/users";
     }
 
-    @RequestMapping("/updateInfo")
+    @RequestMapping("/updateInfo")//получаем работника по id
     public String updateUser(@RequestParam("userId") long id, Model model) {
         model.addAttribute("user", userService.getUser(id));
         return "user-info";

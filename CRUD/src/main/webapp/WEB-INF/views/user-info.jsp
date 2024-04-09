@@ -7,8 +7,10 @@
 
 <body>
 <h1>List of Users</h1>
-<h2>Create New User</h2>
-<form  th:action="@{/create}" th:object="${user}" method="post">
+<h2>User information</h2>
+<form th:action="@{/create}" th:object="${user}" method="post">
+    <div><input type="hidden" th:field="*{id}"/></div>
+
     <div>
         <label for="name">Name:</label>
         <input type="text" id="name" th:field="*{name}" required>
